@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <main class="container mt-5">
+        <div class="row text-center">
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- al boton tengo que agregarle un atributo para poderlo leer des JS.
+                        se hace con data-fruta = " frutilla" -->
+                        <h5 class="card-title">fresa 🍓</h5>
+                        <p class="lead">$300</p>
+                        <button class="btn btn-outline-primary"
+                        data-fruta="fresa" data-precio = "300"
+                        >Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">banana 🍌</h5>
+                        <p class="lead">$100</p>
+                        <button class="btn btn-outline-primary"
+                        data-fruta="Banana"  data-precio="100"
+                        >Agregar</button>
+                    </div>
+                </div>
+            </article>
+            <article class="col-sm-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzana 🍏</h5>
+                        <p class="lead">$200</p>
+                        <button class="btn btn-outline-primary"
+                        data-fruta="manzana" data-precio="200"
+                        >Agregar</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="container mt-3">
+        <ul class="list-group" id="carrito">
+            <!-- CADA LI TIENE QUE SE DIMANICO, POR ESO LO COLOCO EN UN TEMPLATE -->
+            <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="lead">Frutilla</span>
+                <span class="badge bg-primary rounded-pill">12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="lead">Banana</span>
+                <span class="badge bg-primary rounded-pill">12</span>
+            </li> -->
+           
+           
+        </ul>
+    </section>
+
+    <footer id="total" class="container mt-3">
+        
+    </footer>
+
+    <template id="template">
+        <li class="list-group-item bg-secondary text-white">
+                <span class="badge bg-primary rounded-pill align-middle">12</span>
+                <span class="lead align-middle">Frutilla</span>
+            
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <p class="lead mb-0">Total: <span>300</span></p>
+            </div>
+            <div>
+                <button class="btn btn-sm btn-danger">Disminuir</button>
+                <button class="btn btn-sm btn-success">Agregar</button> 
+            </div>
+        </li>
+        
+        
+    </template>
+
+    <template id="template-Total">
+        <div class="card">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <p class="lead mb-0">Total $ <span>1500</span></p>
+                <button class="btn btn-outline-info">Finalizar compra</button>
+            </div>
+        </div>
+    </template>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
